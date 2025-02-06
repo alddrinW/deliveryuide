@@ -27,4 +27,4 @@ function Rol(){
     )
 }
 
-export default Rol   
+export default Rol;   

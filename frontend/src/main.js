@@ -2,9 +2,11 @@
 import Navigation from './componentes/Navigation';
 import Layout from './componentes/Layout';
 import Footer from './componentes/Footer';
-import Header from './componentes/Header';
 import Inicio from './pages/presentacion/Inicio';
 import Rol from './pages/presentacion/Rol';
+import IniciarSesion from './pages/presentacion/IniciarSesion';
+import IndexPropietario from './pages/propietarios/IndexPropietario';
+
 // import ListTesistas from './pages/tesistas/ListTesistas';
 
 function renderMainContent() {
@@ -29,8 +31,14 @@ function initApp() {
         case '/':
           mainContent = Inicio();
           break;
-        case '/crear-cuenta':
+        case '/crear_cuenta':
           mainContent = Rol();
+          break;
+        case '/iniciar_sesion':
+          mainContent = IniciarSesion();
+          break;
+        case '/propietario/index':
+          mainContent = IndexPropietario();
           break;
         //case 'login':
         //case 'dashboard':
@@ -41,7 +49,6 @@ function initApp() {
 
       // Se arma la estructura básica del proyecto
       const content = `
-        ${Header()}
         ${Navigation()}
         <main id="main-content">
           ${mainContent}
